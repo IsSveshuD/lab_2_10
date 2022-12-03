@@ -4,7 +4,8 @@
 def sm(*args):
     if args:
         values = [float(arg) for arg in args]
-        print(sum(map(abs, values[values.index(0) + 1:])))
+
+        print(sum(values[values.index(min(values)) + 1:]))
     else:
         return None
 

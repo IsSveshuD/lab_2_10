@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import numpy as np
-
 
 def garmony(*args):
     if args:
         values = [float(arg) for arg in args]
-
+        p = 1
         n = len(values)
-        p = np.prod(values)
+        for value in values:
+            p *= value
         return n / (sum(values) / p)
     else:
         return None
